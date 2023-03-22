@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: v413-cnv-fbc-gmzm
+  namespace: cnv-fbc-tenant
+spec:
+  replicas: 1
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - image: quay.io/redhat-appstudio/user-workload@sha256:61dd28a2e64235e19cf9aa964a5748a3281ba96a3ebce830abd792b296fa9d8a
+        name: container-image
+        resources: {}
+status: {}
