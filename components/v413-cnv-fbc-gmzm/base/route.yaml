@@ -1,0 +1,23 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: v413-cnv-fbc-gmzm
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: v413-cnv-fbc-gmzm
+    app.kubernetes.io/part-of: cnv-fbc
+  name: v413-cnv-fbc-gmzm
+  namespace: cnv-fbc-tenant
+spec:
+  port:
+    targetPort: 50051
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: v413-cnv-fbc-gmzm
+    weight: 100
+status: {}
